@@ -1,0 +1,473 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Kalam', cursive;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+section{
+    padding: 30px 0px;
+}
+
+h2{
+    font-size: 2rem;
+    color: rgba(3, 3, 107, 0.815);
+    text-align: center;
+    margin: 20px;
+}
+
+p{
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+
+
+
+
+/*--------------mobile nav------------------*/
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav *{
+    color: white;
+}
+
+nav input[type=checkbox], .nav-list{
+    display: none;
+}
+
+nav input[type=checkbox]:checked + .nav-list{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    background: rgba(3, 3, 107, 0.815);
+    width: 100%;
+    left: 0;
+    padding-left: 20px;
+}
+
+.nav-list li{
+    margin: 5px 0px;
+}
+
+/*--------------mobile welcome-section--------------*/
+#welcome-section{
+    height: 100vh;
+    background: url(../images/welcome.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    text-align: center;
+}
+
+#welcome-section div{
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(167, 3, 3, 0.664);
+    border-radius: 10px;
+}
+
+/*--------------mobile description-section-----------------*/
+#description-section {
+    min-height: 100vh;
+}
+
+#description-section .container{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+#description-section .container .card{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+#description-section .card .img-div{
+    min-height: 50px;
+    min-width: 50px;
+}
+
+#description-section img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*------------------mobile about-me-section-----------------*/
+#about-me-section{
+    min-height: 100vh;
+}
+
+#about-me-section .container{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+#about-me-section .card{
+    border: .5px solid black;
+    box-shadow: 0px 0px 10px black;
+    border-radius: 10px;
+    margin: 0px 10px;
+}
+
+#about-me-section .img-div{
+    min-width: 50px;
+    min-height: 50px;
+    border-radius: 10px;
+}
+
+#about-me-section img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+/*---------------mobile gallery-section--------------*/
+#gallery-section {
+    min-height: 100vh;
+}
+
+#gallery-section .container{
+    column-count: 1;
+}
+
+#gallery-section .box{
+    min-height: 50px;
+    min-width: 50px;
+}
+
+#gallery-section img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/*------------mobile parallax-section------------*/
+#parallax-section{
+    background: url(../images/parallax.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 50vh;
+}
+
+/*------------mobile review-section------------*/
+#review-section{
+    min-height: 100vh;
+}
+
+#review-section .container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+}
+
+#review-section .card{  
+    background: #C0C0C0;
+    margin-top: 50px;
+    padding-bottom: 20px;
+}
+
+#review-section .card .img-div{
+    text-align: center;
+}
+
+#review-section img{
+    object-fit: contain;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: -50px;
+}
+
+#review-section .stars-div{
+    text-align: center;
+}
+
+#review-section .stars-div i{
+    color: rgb(199, 171, 13);
+}
+
+
+/*---------------mobile contact-section---------------*/
+#contact-section{
+    min-height: 100vh;
+}
+
+#contact-section .container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    text-align: center;
+}
+
+#contact-section .icons-div{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 5px 0px;
+}
+
+#contact-section .form-div{
+    margin: 0px 20px;
+}
+
+#contact-section .form-group{
+    margin: 5px 0px;
+    padding: 5px 0px;
+}
+
+#contact-section .form-control{
+    width: 100%;
+    border: none;
+    border-bottom: .5px solid black;
+    outline: none;
+    font-size: 1.2rem;
+}
+
+#contact-section .form-control:focus{
+    font-size: 1.2rem;
+}
+
+#contact-section .map-div{
+    padding: 20px;
+    height: 60vh;
+}
+
+#contact-section .map-div iframe{
+    width: 100%;
+    height: 100%;
+}
+
+footer{
+    text-align: center;
+    color: white;
+    background: rgba(3, 3, 107, 0.815);
+    padding: 1.1rem;
+}
+
+
+/*------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------Responsive-----------------------------------------*/
+/*------------------------------------------------------------------------------------------------*/
+
+/* tablet */
+@media screen and (min-width: 768px){
+
+    /*-------------tablet-description-section--------------*/
+    #description-section .container{
+        padding: 0px 50px;
+    }
+
+    #description-section .container .card{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #description-section .container .card-2{
+        grid-template-areas: "text-div img-div";
+    }
+    #description-section .container .card-2 .img-div{
+        grid-area: img-div;
+    }
+    #description-section .container .card-2 .text-div{
+        grid-area: text-div;
+    }
+    #description-section .container .card .text-div{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    /*--------------tablet about-me-section----------------*/
+    #about-me-section{
+        min-height: 40vh;
+    }
+
+    #about-me-section .container{
+        margin: 0px 30px;
+    }
+
+    #about-me-section .container .card{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+
+    #about-me-section img{
+        object-fit: cover;
+    }
+
+    #about-me-section .text-div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    /*--------------tablet gallery-section----------------*/
+    #gallery-section .container{
+        column-count: 2;
+        gap: 0;
+    }
+
+    /*--------------tablet review-section-----------------*/
+    #review-section{
+        min-height:30vh;
+    }
+    #review-section .container{
+        margin: 0px 100px;
+    }
+
+    /*--------------tablet contact-section-----------------*/
+    #contact-section .container{
+        grid-gap: 30px;
+    }
+    #contact-section .form-div{
+        margin: 0px 120px;
+    }
+}
+
+/*laptop*/
+@media screen and (min-width: 1024px){
+
+    /*---------------------laptop nav-------------------*/
+    nav{
+        font-size: 1.5rem;
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+        transition: 1s;
+        height: 60px;
+    }
+
+    nav label{
+        display: none;
+    }
+
+    nav .nav-list{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 60%;
+    }
+
+    nav .nav-list a{
+        transition: 1s;
+    }
+
+    nav .nav-list a:hover{
+        margin-left: 10px;
+        font-size: 1.6rem;
+        border-bottom: 1px solid red;
+        transition: 1s;
+    }
+
+    .nav-scrolling-active{
+        background: rgba(3, 3, 107, 0.815);
+        transition: 1s;
+    }
+
+    /*-------------laptop welcome-section---------------*/
+    #welcome-section{
+        background-position-y: top;
+    }
+
+    h1{
+        font-size: 2.2rem;
+    }
+    p{
+        font-size: 1.5rem;
+    }
+    h2{
+        margin: 25px;
+        font-size: 4rem;
+    }
+
+    /*-------------laptop gallery-section---------------*/
+    #gallery-section .container{
+        display: grid;
+        grid-template:  "1fr 1fr 1fr 1fr 1fr" 33.33vh
+                        "1fr 1fr 1fr 1fr 1fr" 33.33vh
+                        "1fr 1fr 1fr 1fr 1fr" 33.33vh;
+        padding: 0px 20px;
+    }
+
+    #gallery-section .box-a, .box-g{
+        grid-row: span 2;
+    }
+
+    #gallery-section .box-b, .box-f, .box-h{
+        grid-column: span 2;
+    }
+
+    #gallery-section .box{
+        transition: 1s;
+    }
+
+    #gallery-section .box:hover{
+        transform: scale(1.05);
+        transition: 1s;
+    }
+
+    #gallery-section img{
+        object-fit: cover;
+    }
+
+    /*-------------laptop review-section---------------*/
+    #review-section .container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /*-------------laptop review-section---------------*/
+    #contact-section .form-div{
+        margin: 0px 300px;
+    }
+
+    #contact-section .form-div *{
+        font-size: 1.5rem;
+    }
+
+    #contact-section .form-control:focus{
+        font-size: 1.5rem;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
